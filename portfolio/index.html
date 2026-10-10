@@ -10,80 +10,78 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--cob:#2336d9;--deep:#0d1450;--ice:#eef0ff;--sun:#ffd60a;--wh:#fff}
+:root{--ink:#1c2340;--mut:#56608a;--p:#5b4de0;--c:#16b8d4;--o:#ff8a5c;--ln:#dfe3ff;--g:linear-gradient(120deg,#6a5cff,#16b8d4)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--cob);color:var(--wh);font:17px/1.6 Figtree,system-ui,sans-serif}
+body{margin:0;overflow-x:hidden;background:linear-gradient(135deg,#e4f0ff 0%,#f0e8ff 35%,#ffe8dc 68%,#dffaf1 100%);color:var(--ink);font:17px/1.6 Figtree,system-ui,sans-serif}
 h1,h2,h3,summary{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif}
-a{color:inherit}:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+a{color:inherit}:focus-visible{outline:3px solid var(--p);outline-offset:3px}
 .w{max-width:1100px;margin:0 auto;padding:0 22px}
 .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;padding:56px 0 34px}
 h1{margin:0;font-size:clamp(60px,12.5vw,158px);line-height:.88;letter-spacing:-.035em;font-weight:800}
 .ln{display:block;overflow:hidden;padding-bottom:.06em}.ln span{display:block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d)}
 @keyframes up{to{transform:none}}
-.lead{max-width:520px;font-size:20px;margin:22px 0 24px;opacity:0;animation:fi .8s .9s forwards}@keyframes fi{to{opacity:1}}
+.lead{max-width:520px;font-size:20px;margin:22px 0 24px;color:var(--mut);opacity:0;animation:fi .8s .9s forwards}@keyframes fi{to{opacity:1}}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:12px 22px;border-radius:99px;border:2px solid var(--wh);font-weight:600;text-decoration:none;transition:.25s}
-.btn.p{background:var(--sun);border-color:var(--sun);color:var(--deep)}.btn:hover{background:var(--wh);color:var(--cob);border-color:var(--wh)}
+.btn{padding:12px 22px;border-radius:99px;border:2px solid var(--ink);font-weight:600;text-decoration:none;transition:.25s;background:rgba(255,255,255,.6)}
+.btn.p{background:var(--g);border-color:transparent;color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(91,77,224,.25)}
 .pw{position:relative;justify-self:center;width:min(320px,82%)}
-.ph{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 28px 28px;box-shadow:16px 16px 0 var(--sun);animation:float 6s ease-in-out infinite}
+.ph{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 28px 28px;box-shadow:16px 16px 0 #cfc8ff;animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-10px)}}
 .bd{position:absolute;left:-46px;bottom:34px;width:120px;height:120px;animation:spin 16s linear infinite}
-.bd text{font:600 13px Figtree,sans-serif;fill:var(--wh);letter-spacing:2px}@keyframes spin{to{transform:rotate(360deg)}}
-.term{background:var(--deep);border-radius:14px;padding:16px 20px;font:15px/1.7 ui-monospace,Menlo,Consolas,monospace;min-height:148px;color:#cfd4ff}
-.term b{color:var(--sun);font-weight:400}.term i{display:inline-block;width:9px;height:17px;background:var(--sun);vertical-align:-3px;animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
-.tick{background:var(--sun);color:var(--deep);overflow:hidden;white-space:nowrap;margin-top:44px;font:800 26px "Bricolage Grotesque",sans-serif;padding:12px 0;transform:rotate(-1.2deg)}
+.bd text{font:600 13px Figtree,sans-serif;fill:#fff;letter-spacing:2px}@keyframes spin{to{transform:rotate(360deg)}}
+.term{background:rgba(255,255,255,.75);border:1px solid var(--ln);border-radius:16px;padding:16px 20px;font:15px/1.7 ui-monospace,Menlo,Consolas,monospace;min-height:148px;color:var(--mut);box-shadow:0 10px 30px rgba(91,77,224,.1)}
+.term b{color:var(--p);font-weight:400}.term i{display:inline-block;width:9px;height:17px;background:var(--p);vertical-align:-3px;animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
+.tick{background:var(--g);color:#fff;overflow:hidden;white-space:nowrap;margin-top:44px;font:800 26px "Bricolage Grotesque",sans-serif;padding:12px 0;transform:rotate(-1.2deg)}
 .tick div{display:inline-block;animation:mq 28s linear infinite}.tick span{margin:0 22px}@keyframes mq{to{transform:translateX(-50%)}}
 section{padding:84px 0}h2{font-size:clamp(34px,5.5vw,62px);line-height:1;letter-spacing:-.025em;margin:0 0 10px;font-weight:800}
-.sub{margin:0 0 36px;max-width:620px;opacity:.85}
-.dk{background:var(--deep)}.pp{background:var(--ice);color:var(--deep)}
+.sub{margin:0 0 36px;max-width:620px;color:var(--mut)}
+.dk{background:rgba(255,255,255,.5)}.pp{background:rgba(255,255,255,.72)}
 svg.fl{width:100%;height:auto;display:block}
-.fl text{font:600 15px Figtree,sans-serif;fill:#fff}.fl .s{font-weight:400;font-size:12px;fill:#aab2ff}
-.nd{fill:#1a2480;stroke:var(--sun);stroke-width:2;animation:gl 3s ease-in-out infinite;animation-delay:var(--d,0s)}@keyframes gl{50%{fill:#2c3dc9}}
-.ln2{fill:none;stroke:#6b78ff;stroke-width:2;stroke-dasharray:6 8;animation:da 1.2s linear infinite}@keyframes da{to{stroke-dashoffset:-14}}
-.bx{fill:none;stroke:#8f9aff;stroke-dasharray:3 7}
+.fl text{font:600 15px Figtree,sans-serif;fill:var(--ink)}.fl .s{font-weight:400;font-size:12px;fill:var(--mut)}
+.nd{fill:#fff;stroke:var(--p);stroke-width:2;animation:gl 3s ease-in-out infinite;animation-delay:var(--d,0s)}@keyframes gl{50%{fill:#ece9ff}}
+.ln2{fill:none;stroke:#8f86ee;stroke-width:2;stroke-dasharray:6 8;animation:da 1.2s linear infinite}@keyframes da{to{stroke-dashoffset:-14}}
+.bx{fill:none;stroke:#a9b2e8;stroke-dasharray:3 7}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:60px}
-.stats b{display:block;font:800 clamp(44px,7vw,84px)/1 "Bricolage Grotesque",sans-serif;color:var(--cob)}.stats span{font-weight:600}
+.stats b{display:block;font:800 clamp(44px,7vw,84px)/1.1 "Bricolage Grotesque",sans-serif;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}.stats span{font-weight:600;color:var(--mut)}
 .grp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
 .grp h3{margin:0 0 12px;font-size:21px}.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{padding:6px 14px;border-radius:99px;background:var(--deep);color:var(--ice);font-size:15px;font-weight:600;opacity:0;transform:scale(.6);transition:.5s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(var(--i)*70ms)}
-.chips.in span{opacity:1;transform:none}.chips span:hover{background:var(--cob);transform:rotate(-3deg) scale(1.08)}
-details{border-top:2px solid var(--deep)}details:last-child{border-bottom:2px solid var(--deep)}
+.chips span{padding:6px 14px;border-radius:99px;background:#fff;border:1.5px solid #c9c2ff;color:var(--ink);font-size:15px;font-weight:600;opacity:0;transform:scale(.6);transition:.5s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(var(--i)*70ms)}
+.chips.in span{opacity:1;transform:none}.chips span:hover{background:var(--g);color:#fff;border-color:transparent;transform:rotate(-3deg) scale(1.08)}
+details{border-top:2px solid rgba(28,35,64,.14)}details:last-child{border-bottom:2px solid rgba(28,35,64,.14)}
 summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font-size:clamp(21px,3.4vw,34px);font-weight:800;letter-spacing:-.015em}
-summary::-webkit-details-marker{display:none}summary small{font:600 15px Figtree,sans-serif;opacity:.7;white-space:nowrap}
-summary:after{content:"+";font-size:34px;transition:transform .3s;margin-left:auto}details[open] summary:after{transform:rotate(45deg)}
-summary:hover{color:var(--cob)}
-.bdy{padding:0 0 24px;max-width:700px;animation:op .45s ease}@keyframes op{from{opacity:0;transform:translateY(-8px)}}
-.bdy .chips span{opacity:1;transform:none;transition:none;background:var(--cob)}
-.tl{position:relative;margin-left:8px;border-left:3px solid rgba(255,255,255,.3)}
-.job{position:relative;padding:0 0 38px 30px}.job:before{content:"";position:absolute;left:-12px;top:6px;width:21px;height:21px;border-radius:50%;background:var(--cob);border:3px solid #fff;transition:.5s}
-.job.in:before{background:var(--sun);border-color:var(--sun);transform:scale(1.25)}
-.job h3{margin:0;font-size:24px}.job .d{opacity:.8;margin-bottom:8px}.job ul{margin:0;padding-left:20px;max-width:680px}
-.ct{background:var(--sun);color:var(--deep);text-align:center}.ct h2{font-size:clamp(40px,8vw,104px)}.ct .sub{margin:0 auto 28px}
-.ct .btn{border-color:var(--deep)}.ct .btn.p{background:var(--deep);color:var(--sun);border-color:var(--deep)}.ct .btn:hover{background:var(--cob);color:#fff;border-color:var(--cob)}
-.ct .btns{justify-content:center}footer{background:var(--deep);text-align:center;padding:22px;font-size:14px;opacity:.9}
-body{overflow-x:hidden}
+summary::-webkit-details-marker{display:none}summary small{font:600 15px Figtree,sans-serif;color:var(--mut);white-space:nowrap}
+summary:after{content:"+";font-size:34px;transition:transform .3s;margin-left:auto;color:var(--p)}details[open] summary:after{transform:rotate(45deg)}
+summary:hover{color:var(--p)}
+.bdy{padding:0 0 24px;max-width:700px;color:var(--mut);animation:op .45s ease}@keyframes op{from{opacity:0;transform:translateY(-8px)}}
+.bdy .chips span{opacity:1;transform:none;transition:none}
+.tl{position:relative;margin-left:8px;border-left:3px solid rgba(91,77,224,.25)}
+.job{position:relative;padding:0 0 38px 30px}.job:before{content:"";position:absolute;left:-12px;top:6px;width:21px;height:21px;border-radius:50%;background:#fff;border:3px solid var(--p);transition:.5s}
+.job.in:before{background:var(--o);border-color:var(--o);transform:scale(1.25)}
+.job h3{margin:0;font-size:24px}.job .d{color:var(--mut);margin-bottom:8px}.job ul{margin:0;padding-left:20px;max-width:680px;color:var(--mut)}
+.ct{background:var(--g);color:#fff;text-align:center}.ct h2{font-size:clamp(40px,8vw,104px)}.ct .sub{margin:0 auto 28px;color:#eaf7ff}
+.ct .btn{border-color:#fff;background:transparent;color:#fff}.ct .btn.p{background:#fff;color:var(--p)}.ct .btns{justify-content:center}
+footer{text-align:center;padding:22px;font-size:14px;color:var(--mut)}
 svg.atom{width:100%;max-width:760px;height:auto;margin:0 auto;display:block}
-.atom text{font:600 14px Figtree,sans-serif;fill:#fff;paint-order:stroke;stroke:#2336d9;stroke-width:4px}
-.atom .nu{font:800 17px "Bricolage Grotesque",sans-serif;fill:var(--deep);stroke:none;text-anchor:middle}
-.or{fill:none;stroke:rgba(255,255,255,.4);stroke-width:1.5}
+.atom text{font:600 14px Figtree,sans-serif;fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:4px}
+.atom .nu{font:800 17px "Bricolage Grotesque",sans-serif;fill:#fff;stroke:none;text-anchor:middle}
+.or{fill:none;stroke:#b3abf5;stroke-width:1.5}
 .pipe{display:flex;flex-wrap:wrap;gap:12px 0;margin-bottom:40px}
-.pipe div{position:relative;margin-right:36px;padding:12px 18px;border:2px solid #6b78ff;border-radius:99px;font-weight:600;animation:stg 7.5s infinite;animation-delay:calc(var(--i)*1.2s)}
-.pipe div:not(:last-child):after{content:"";position:absolute;left:100%;top:50%;width:36px;border-top:2px dashed #6b78ff}
-@keyframes stg{0%,14%{background:var(--sun);color:var(--deep);border-color:var(--sun)}18%,100%{background:transparent;color:#fff;border-color:#6b78ff}}
+.pipe div{position:relative;margin-right:36px;padding:12px 18px;border:2px solid #b9c0ee;border-radius:99px;font-weight:600;background:#fff;animation:stg 7.5s infinite;animation-delay:calc(var(--i)*1.2s)}
+.pipe div:not(:last-child):after{content:"";position:absolute;left:100%;top:50%;width:36px;border-top:2px dashed #b9c0ee}
+@keyframes stg{0%,14%{background:var(--p);color:#fff;border-color:var(--p)}18%,100%{background:#fff;color:var(--ink);border-color:#b9c0ee}}
 .cl{display:grid;grid-template-columns:1fr 1.3fr;gap:24px}
-.kp,.aw{border:2px solid #6b78ff;border-radius:18px;padding:24px}.kp h3,.aw h3{margin:0 0 10px;font-size:26px}
-.pods{display:flex;gap:8px;margin:18px 0 8px}.pods i{width:36px;height:36px;border-radius:9px;border:2px solid var(--sun);animation:roll 4s infinite;animation-delay:calc(var(--i)*.5s)}
-@keyframes roll{0%,20%{background:#1a2480;transform:scale(1)}35%{background:var(--sun);transform:scale(1.2)}50%,100%{background:#4a5cff;transform:scale(1)}}
+.kp,.aw{background:rgba(255,255,255,.8);border:1px solid var(--ln);border-radius:18px;padding:24px;color:var(--mut)}.kp h3,.aw h3{margin:0 0 10px;font-size:26px;color:var(--ink)}
+.pods{display:flex;gap:8px;margin:18px 0 8px}.pods i{width:36px;height:36px;border-radius:9px;border:2px solid var(--p);animation:roll 4s infinite;animation-delay:calc(var(--i)*.5s)}
+@keyframes roll{0%,20%{background:#fff;transform:scale(1)}35%{background:var(--o);transform:scale(1.2)}50%,100%{background:#cfc8ff;transform:scale(1)}}
 .tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-.tile{padding:12px 14px;border-radius:12px;background:#1a2480}.tile b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:19px}.tile span{font-size:14px;opacity:.85}
-.tile b:before{content:"";display:inline-block;width:9px;height:9px;margin-right:8px;border-radius:50%;background:#43e08b;animation:pl 2.4s infinite;animation-delay:calc(var(--i)*.4s)}@keyframes pl{50%{opacity:.25;transform:scale(.6)}}
+.tile{padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--ln)}.tile b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:19px;color:var(--ink)}.tile span{font-size:14px}
+.tile b:before{content:"";display:inline-block;width:9px;height:9px;margin-right:8px;border-radius:50%;background:#2fc47a;animation:pl 2.4s infinite;animation-delay:calc(var(--i)*.4s)}@keyframes pl{50%{opacity:.25;transform:scale(.6)}}
 .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-.pc{text-align:left;font:inherit;color:#fff;background:var(--deep);border:2px solid #fff;border-radius:18px;padding:22px;cursor:pointer;min-height:210px;transition:border-color .25s}.pc:hover{border-color:var(--sun)}
-.pc b{display:block;font:800 22px "Bricolage Grotesque",sans-serif;margin-bottom:8px}.pc .a{display:none}.pc.fx .a{display:block;animation:flip .5s}.pc.fx .q{display:none}
-.pc em{display:block;margin-top:14px;color:var(--sun);font-style:normal;font-weight:600}.pc strong{display:block;font:800 38px/1 "Bricolage Grotesque",sans-serif;color:var(--sun);margin-top:12px}
+.pc{text-align:left;font:inherit;color:var(--mut);background:rgba(255,255,255,.85);border:2px solid var(--ln);border-radius:18px;padding:22px;cursor:pointer;min-height:210px;transition:.25s}.pc:hover{border-color:var(--p);box-shadow:0 10px 26px rgba(91,77,224,.15)}
+.pc b{display:block;font:800 22px "Bricolage Grotesque",sans-serif;margin-bottom:8px;color:var(--ink)}.pc .a{display:none}.pc.fx .a{display:block;animation:flip .5s}.pc.fx .q{display:none}
+.pc em{display:block;margin-top:14px;color:var(--p);font-style:normal;font-weight:600}.pc strong{display:block;font:800 38px/1.1 "Bricolage Grotesque",sans-serif;margin-top:12px;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
 @keyframes flip{from{opacity:0;transform:rotateX(80deg)}}
-@media(max-width:780px){.cl{grid-template-columns:1fr}}
-@media(max-width:780px){.hero{grid-template-columns:1fr}.pw{order:-1;width:230px}.bd{left:-30px}.stats{grid-template-columns:repeat(2,1fr)}summary small{display:none}}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.pw{order:-1;width:230px}.bd{left:-30px}.stats{grid-template-columns:repeat(2,1fr)}summary small{display:none}.cl{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ln span,.lead,.chips span{opacity:1;transform:none}}
 </style>
 </head>
@@ -96,7 +94,7 @@ svg.atom{width:100%;max-width:760px;height:auto;margin:0 auto;display:block}
 <div class="btns"><a class="btn p" href="Hari_Shanker_Mishra_CV.pdf">Download CV</a><a class="btn" href="https://www.linkedin.com/in/hari-shanker-m-35331b197">LinkedIn</a><a class="btn" href="mailto:arvinmishraji@gmail.com">Email me</a></div>
 </div>
 <div class="pw"><img class="ph" src="photo.jpg" alt="Hari Shanker Mishra" width="320" height="400">
-<svg class="bd" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#0d1450"/><defs><path id="c" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><text><textPath href="#c">Open to work  Delhi NCR  Remote  </textPath></text></svg></div>
+<svg class="bd" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#1c2340"/><defs><path id="c" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><text><textPath href="#c">Open to work  Delhi NCR  Remote  </textPath></text></svg></div>
 </div>
 <div class="w"><div class="term" id="t" aria-label="Terminal showing a migration and deployment"></div></div>
 <div class="tick" aria-hidden="true"><div id="mq"></div></div>
@@ -115,11 +113,11 @@ svg.atom{width:100%;max-width:760px;height:auto;margin:0 auto;display:block}
 <text x="685" y="168" text-anchor="middle">Kafka</text>
 <text x="845" y="93" text-anchor="middle">PostgreSQL</text><text x="845" y="243" text-anchor="middle">Redis</text>
 <text class="s" x="20" y="300">Built and shipped by Jenkins and GitLab CI/CD</text>
-<g fill="#ffd60a"><circle r="6"><animateMotion dur="4s" repeatCount="indefinite" path="M130 163H320C360 163 360 78 400 78H550C590 78 590 163 630 163H740C765 163 765 88 790 88"/></circle><circle r="6"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M130 163H320C360 163 360 78 400 78H550C590 78 590 163 630 163H740C765 163 765 88 790 88"/></circle><circle r="6"><animateMotion dur="4.6s" begin="-1s" repeatCount="indefinite" path="M130 163H320C360 163 360 248 400 248H550C590 248 590 163 630 163H740C765 163 765 238 790 238"/></circle><circle r="6"><animateMotion dur="4.6s" begin="-3.3s" repeatCount="indefinite" path="M130 163H320C360 163 360 248 400 248H550C590 248 590 163 630 163H740C765 163 765 238 790 238"/></circle></g>
+<g fill="#ff8a5c"><circle r="6"><animateMotion dur="4s" repeatCount="indefinite" path="M130 163H320C360 163 360 78 400 78H550C590 78 590 163 630 163H740C765 163 765 88 790 88"/></circle><circle r="6"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M130 163H320C360 163 360 78 400 78H550C590 78 590 163 630 163H740C765 163 765 88 790 88"/></circle><circle r="6"><animateMotion dur="4.6s" begin="-1s" repeatCount="indefinite" path="M130 163H320C360 163 360 248 400 248H550C590 248 590 163 630 163H740C765 163 765 238 790 238"/></circle><circle r="6"><animateMotion dur="4.6s" begin="-3.3s" repeatCount="indefinite" path="M130 163H320C360 163 360 248 400 248H550C590 248 590 163 630 163H740C765 163 765 238 790 238"/></circle></g>
 </svg>
 </div></section>
 
-<section><div class="w" style="text-align:center"><h2>Java at the core, everything else connected</h2><p class="sub" style="margin-left:auto;margin-right:auto">Every tool I use orbits the Java services I write, and each one connects back to them.</p><svg class="atom" viewBox="0 0 600 400" role="img" aria-label="Atom diagram with Java at the centre and Spring Boot, Kafka, PostgreSQL, Redis, Docker, Kubernetes and AWS orbiting it"><defs><path id="oa" d="M510 200A210 70 0 0 1 90 200A210 70 0 0 1 510 200"/><path id="ob" d="M405 381.9A210 70 60 0 1 195 18.1A210 70 60 0 1 405 381.9"/><path id="oc" d="M195 381.9A210 70 120 0 1 405 18.1A210 70 120 0 1 195 381.9"/></defs><use href="#oa" class="or"/><use href="#ob" class="or"/><use href="#oc" class="or"/><circle cx="300" cy="200" r="40" fill="none" stroke="#ffd60a" stroke-width="3"><animate attributeName="r" from="40" to="85" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" from="1" to="0" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="300" cy="200" r="40" fill="#ffd60a"/><text class="nu" x="300" y="206">Java 21</text><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">Spring Boot</text><animateMotion dur="9s" begin="0s" repeatCount="indefinite"><mpath href="#oa"/></animateMotion></g><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">Kafka</text><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite"><mpath href="#oa"/></animateMotion></g><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">PostgreSQL</text><animateMotion dur="11s" begin="0s" repeatCount="indefinite"><mpath href="#ob"/></animateMotion></g><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">Redis</text><animateMotion dur="11s" begin="-5.5s" repeatCount="indefinite"><mpath href="#ob"/></animateMotion></g><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">Docker</text><animateMotion dur="13s" begin="0s" repeatCount="indefinite"><mpath href="#oc"/></animateMotion></g><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">Kubernetes</text><animateMotion dur="13s" begin="-4.3s" repeatCount="indefinite"><mpath href="#oc"/></animateMotion></g><g><circle r="7" fill="#ffd60a"/><text x="12" y="5">AWS</text><animateMotion dur="13s" begin="-8.6s" repeatCount="indefinite"><mpath href="#oc"/></animateMotion></g></svg></div></section>
+<section><div class="w" style="text-align:center"><h2>Java at the core, everything else connected</h2><p class="sub" style="margin-left:auto;margin-right:auto">Every tool I use orbits the Java services I write, and each one connects back to them.</p><svg class="atom" viewBox="0 0 600 400" role="img" aria-label="Atom diagram with Java at the centre and Spring Boot, Kafka, PostgreSQL, Redis, Docker, Kubernetes and AWS orbiting it"><defs><path id="oa" d="M510 200A210 70 0 0 1 90 200A210 70 0 0 1 510 200"/><path id="ob" d="M405 381.9A210 70 60 0 1 195 18.1A210 70 60 0 1 405 381.9"/><path id="oc" d="M195 381.9A210 70 120 0 1 405 18.1A210 70 120 0 1 195 381.9"/></defs><use href="#oa" class="or"/><use href="#ob" class="or"/><use href="#oc" class="or"/><circle cx="300" cy="200" r="40" fill="none" stroke="#5b4de0" stroke-width="3"><animate attributeName="r" from="40" to="85" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" from="1" to="0" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="300" cy="200" r="40" fill="#5b4de0"/><text class="nu" x="300" y="206">Java 21</text><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">Spring Boot</text><animateMotion dur="9s" begin="0s" repeatCount="indefinite"><mpath href="#oa"/></animateMotion></g><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">Kafka</text><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite"><mpath href="#oa"/></animateMotion></g><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">PostgreSQL</text><animateMotion dur="11s" begin="0s" repeatCount="indefinite"><mpath href="#ob"/></animateMotion></g><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">Redis</text><animateMotion dur="11s" begin="-5.5s" repeatCount="indefinite"><mpath href="#ob"/></animateMotion></g><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">Docker</text><animateMotion dur="13s" begin="0s" repeatCount="indefinite"><mpath href="#oc"/></animateMotion></g><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">Kubernetes</text><animateMotion dur="13s" begin="-4.3s" repeatCount="indefinite"><mpath href="#oc"/></animateMotion></g><g><circle r="7" fill="#ff8a5c"/><text x="12" y="5">AWS</text><animateMotion dur="13s" begin="-8.6s" repeatCount="indefinite"><mpath href="#oc"/></animateMotion></g></svg></div></section>
 
 <section class="dk"><div class="w"><h2>Kubernetes and AWS</h2><p class="sub">How code travels from a push to a running, monitored service.</p><div class="pipe"><div style="--i:0">Push code</div><div style="--i:1">Build with Jenkins or GitLab</div><div style="--i:2">Docker image</div><div style="--i:3">Deploy to Kubernetes</div><div style="--i:4">Monitor in CloudWatch</div></div><div class="cl"><div class="kp"><h3>Kubernetes</h3><p>Spring Boot services run in containers on Kubernetes, so development, staging and production behave the same. Spring Cloud Config supplies settings for each environment, and releases roll out the same way every time.</p><div class="pods" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i></div><small>Pods updating one by one during a release</small></div><div class="aw"><h3>AWS</h3><div class="tg"><div class="tile" style="--i:0"><b>EC2</b><span>Hosts the services</span></div><div class="tile" style="--i:1"><b>S3</b><span>File and data storage</span></div><div class="tile" style="--i:2"><b>RDS</b><span>Managed databases</span></div><div class="tile" style="--i:3"><b>IAM</b><span>Roles and access control</span></div><div class="tile" style="--i:4"><b>CloudWatch</b><span>Logs and monitoring</span></div></div></div></div></div></section>
 
